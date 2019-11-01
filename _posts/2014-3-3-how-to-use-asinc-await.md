@@ -28,6 +28,7 @@ title: Как использовать Async / Await в JavaScript?
 ### `Async` - Асинхронный
 
 Функции с ключевым словом **«async»** указывают, что функция всегда возвращает `Promise`. Если функция выдает ошибку, то Обещание (`Promise`) будет отклонено. Если функция возвращает значение, обещание (`Promise`) будет выполнено. Достаточно просто!<br/>
+
 ```javascript
 async function add(a, b) {
   return a + b;
@@ -55,6 +56,31 @@ async function add(a, b) {
   // Call ToDos()
   ToDos();
 ```
+
+<!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td><pre style="margin: 0; line-height: 125%"> <span style="color: #cccccc">async</span> <span style="color: #00cd00">function</span> <span style="color: #cccccc">ToDoOne()</span> <span style="color: #cccccc">{</span> <span style="color: #cccccc">...</span> <span style="color: #cccccc">}</span>
+<span style="color: #cccccc">async</span> <span style="color: #00cd00">function</span> <span style="color: #cccccc">ToDoTwo(value)</span> <span style="color: #cccccc">{</span> <span style="color: #cccccc">...</span> <span style="color: #cccccc">}</span>
+<span style="color: #cccccc">async</span> <span style="color: #00cd00">function</span> <span style="color: #cccccc">ToDoThree(value)</span> <span style="color: #cccccc">{</span> <span style="color: #cccccc">...</span> <span style="color: #cccccc">}</span>
+<span style="color: #cccccc">async</span> <span style="color: #00cd00">function</span> <span style="color: #cccccc">ToDos()</span> <span style="color: #cccccc">{</span>
+<span style="color: #00cd00">let</span> <span style="color: #cccccc">resultOne</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">await</span> <span style="color: #cccccc">ToDoOne();</span>
+<span style="color: #00cd00">let</span> <span style="color: #cccccc">resultTwo</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">await</span> <span style="color: #cccccc">ToDoTwo(resultOne);</span>
+<span style="color: #00cd00">let</span> <span style="color: #cccccc">finalResult</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">await</span> <span style="color: #cccccc">ToDoThree(resultTwo);</span>
+<span style="color: #cdcd00">return</span> <span style="color: #cccccc">finalResult;</span>
+<span style="color: #cccccc">}</span>
+<span style="color: #000080">// Call ToDos()</span>
+<span style="color: #cccccc">ToDos();</span>
+
+</pre></td></tr></table></div>
 
 Мы можем использовать несколько операторов ожидания - `await` . _ToDoThree ()_ будет ожидать завершения _ToDoTwo ()_. И _ToDoTwo ()_ будет ожидать завершения _ToDoOne ()_. <br/>
 
