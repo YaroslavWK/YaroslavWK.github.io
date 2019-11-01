@@ -3,7 +3,7 @@ layout: post
 title: Как использовать Async / Await в JavaScript?
 ---
 
-# Как использовать Async / Await в JavaScript? 
+
 
 ![Logo-Asinc-Await](/images/posts/async-await/async-await.jpg "Текст заголовка логотипа 1")
 
